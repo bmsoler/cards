@@ -1,30 +1,29 @@
 <template>
-  <div id="app" dark>
 
-  <v-app>
+  <v-app class="desktop_verde">
 
     <v-toolbar
-      color="blue-grey"
       dark 
       fixed
       app
-      :style="colorGradient"
+      style="background: transparent; z-index: 100;"
+      class="desktop_verde"
       clipped-right>
       <img src="static/logo_aunna.png" title="Aunna" alt="Aunna Logo" style="width: 150px">
       <!-- <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon> -->
-      <v-toolbar-title>Cards</v-toolbar-title>
+      <!-- <v-toolbar-title>Cards</v-toolbar-title> -->
       <v-spacer></v-spacer>      
     </v-toolbar>
 
-    <v-content :style="colorGradient2"> 
+    <v-content> 
       
-      <v-container fluid>
+      <v-container fluid style="padding-top: 0px;">
           <router-view></router-view>
       </v-container>
      
     </v-content>
 
-    <v-footer color="blue-grey" class="white--text" :style="colorGradient" app>
+    <v-footer color="blue-grey" class="white--text desktop_verde" app>
       <i v-if="socket_connected" class="material-icons" style="color: #31bf31; float: left; margin-right: 5px;">compare_arrows</i><span v-if="socket_connected" style="padding-top: 3px;"> Conectado</span>      
       <span v-if="!socket_connected"><i class="material-icons" style="color: red; float: left; margin-right: 5px">error</i> No conectado [Nota: se necesita conexión socket.io en el puerto {{port}}]</span>
       <v-spacer></v-spacer>
@@ -33,7 +32,6 @@
  
   </v-app>
 
-  </div>
 </template>
 
 <script>
@@ -143,8 +141,17 @@ import VueJsonPretty from 'vue-json-pretty'
   color: #000;
  }  
  /*Color de los datos del json en la modal*/
-.vjs__tree .vjs__value__string {
+ .vjs__tree .vjs__value__string {
     color: #1e4254 !important;
     font-weight: bold;
-}  
+ }  
+  .desktop_verde {
+    background-image: url("/static/fondo_verde.png") !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;    
+  }
+  .toolbar {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+   }
 </style>

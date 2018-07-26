@@ -16,6 +16,7 @@
                     <div class="mc-content">
                         <div class="img-container">
                             <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                            <!-- <img class="img-responsive" src="static/img/azucena.png"> -->
                         </div>
                         <div class="mc-description">
                             He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
@@ -47,6 +48,7 @@
                     <div class="mc-content">
                         <div class="img-container">
                             <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-sean-penn.jpg">
+                            <!-- <img class="img-responsive" src="static/img/jesus.jpg"> -->
                         </div>
                         <div class="mc-description">
                             He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
@@ -78,6 +80,7 @@
                     <div class="mc-content">
                         <div class="img-container">
                             <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-clint-eastwood.jpg">
+                            <!-- <img class="img-responsive" src="static/img/angel.jpg"> -->
                         </div>
                         <div class="mc-description">
                             He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
@@ -1910,5 +1913,11 @@
   h3 {
     font-weight: 200;
   }
+
+  .img-responsive{
+    width: 100%;
+    height: 100%;
+  }
+
 
 </style>
