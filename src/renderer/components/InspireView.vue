@@ -4,22 +4,22 @@
     <section class="container">
        
         <div class="row active-with-click">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
+
+            <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item, index) in items" :key="index">
+                <article :class="randomSkin(item)">
                     <h2>
-                        <span>Christopher Walken</span>
+                        <span>{{item.name}}</span>
                         <strong>
                             <i class="fa fa-fw fa-star"></i>
-                            The Deer Hunter
+                            {{item.project}}
                         </strong>
                     </h2>
                     <div class="mc-content">
                         <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
-                            <!-- <img class="img-responsive" src="static/img/azucena.png"> -->
+                            <img class="img-responsive" :src="item.image">
                         </div>
                         <div class="mc-description">
-                            He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                            {{item.info}}
                         </div>
                     </div>
                     <a class="mc-btn-action">
@@ -27,576 +27,19 @@
                     </a>
                     <div class="mc-footer">
                         <h4>
-                            Social
+                            Horario
                         </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
+                        {{item.horario}}
+                        <!-- <a class="fa fa-fw fa-facebook"></a>
                         <a class="fa fa-fw fa-twitter"></a>
                         <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
+                        <a class="fa fa-fw fa-google-plus"></a> -->
                     </div>
                 </article>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
-                    <h2>
-                        <span>Sean Penn</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Mystic River
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-sean-penn.jpg">
-                            <!-- <img class="img-responsive" src="static/img/jesus.jpg"> -->
-                        </div>
-                        <div class="mc-description">
-                            He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
-                    <h2>
-                        <span>Clint Eastwood</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Million Dollar Baby
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-clint-eastwood.jpg">
-                            <!-- <img class="img-responsive" src="static/img/angel.jpg"> -->
-                        </div>
-                        <div class="mc-description">
-                            He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
-                    <h2>
-                        <span>Dustin Hoffman</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Kramer vs. Kramer
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-dustin-hoffman.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He has been known for his versatile portrayals of antiheroes and vulnerable characters.[3] He won the Academy Award for Kramer vs. Kramer in 1979 ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
-                    <h2>
-                        <span>Edward Norton</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            American History X
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-edward-norton.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He has been nominated for three Academy Awards for his work in the films Primal Fear, American History X and Birdman. He also starred in other roles ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
-                    <h2>
-                        <span>Michael Caine</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Educated Rita
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-michael-caine.jpg">
-                        </div>
-                        <div class="mc-description">
-                            English actor and author. Renowned for his distinctive working class cockney accent, Caine has appeared in over 115 films and is regarded as a British ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Blue">
-                    <h2>
-                        <span>Harvey Keitel</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Pulp Fiction
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-harvey-keitel.jpg">
-                        </div>
-                        <div class="mc-description">
-                            Some of his most notable starring roles were in Martin Scorsese's Mean Streets and Taxi Driver, Ridley Scott's The Duellists and Thelma & Louise, Quentin Tarantino ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Cyan">
-                    <h2>
-                        <span>Jack Nicholson</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            The Shining
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-jack-nicholson.jpg">
-                        </div>
-                        <div class="mc-description">
-                            Throughout his career, Nicholson has portrayed unique and challenging roles, many of which include dark portrayals of excitable, neurotic and psychopathic characters ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Teal">
-                    <h2>
-                        <span>Jeff Bridges</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            The Big Lebowski
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-jeff-bridges.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He comes from a well-known acting family and began his televised acting in 1958 as a child with his father, Lloyd Bridges, and brother, Beau, on television's Sea Hunt ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Green">
-                    <h2>
-                        <span>Joaquin Phoenix</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Her
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-joaquin-phoenix.jpg">
-                        </div>
-                        <div class="mc-description">
-                            is an American actor, producer, music video director, musician and activist. For his work as an artist, Phoenix has received a Grammy Award, a Golden Globe Award and three Academy ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Light-Green">
-                    <h2>
-                        <span>Tom Hanks</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Forrest Gump
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-tom-hanks.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He is known for his roles in Big (1988), Philadelphia (1993), Forrest Gump (1994), Apollo 13 (1995), Saving Private Ryan, You've Got Mail (both 1998), The Green Mile (1999), Cast Away (2000) ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Lime">
-                    <h2>
-                        <span>Philip Seymour Hoffman</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            25th Hour
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-philip-seymour-hoffman.jpg">
-                        </div>
-                        <div class="mc-description">
-                            Best known for his distinctive supporting and character roles – typically lowlifes, bullies, and misfits – Hoffman was a regular presence in films from the early 1990s until his death at age 46.
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Yellow">
-                    <h2>
-                        <span>Paul Newman</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            The Color of Money
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-paul-newman.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He won numerous awards, including an Academy Award for his performance in the 1986 film The Color of Money,[3] a BAFTA Award, a Screen Actors Guild Award, a Cannes Film Festival Award, an Emmy Award ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Amber">
-                    <h2>
-                        <span>Marlon Brando</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            The Godfather
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-marlon-brando.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He is hailed for bringing a gripping realism to film acting, and is frequently cited as the greatest and most influential actor of all time.[2] A cultural icon, Brando is most famous for his Academy ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Orange">
-                    <h2>
-                        <span>Kevin Spacey</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            American Beauty
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-kevin-spacey.jpg">
-                        </div>
-                        <div class="mc-description">
-                            He began his career as a stage actor during the 1980s, before being cast in supporting roles in film and television. He gained critical acclaim in the early 1990s, culminating in his first Academy Award ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Deep-Orange">
-                    <h2>
-                        <span>Robert De Niro</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Taxy Driver
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-robert-de-niro.jpg">
-                        </div>
-                        <div class="mc-description">
-                            His first major film roles were in the sports drama Bang the Drum Slowly (1973) and Martin Scorsese's crime film Mean Streets (1973). In 1974, after being turned down for the role of Sonny Corleone in the crime ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Brown">
-                    <h2>
-                        <span>Steve Mcqueen</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Papillon
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-steve-mcqueen.jpg">
-                        </div>
-                        <div class="mc-description">
-                            Called "The King of Cool", his "anti-hero" persona, developed at the height of the Vietnam War-era counterculture, made him a top box-office draw of the 1960s and 1970s. McQueen received an Academy Award nomination for his ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Grey">
-                    <h2>
-                        <span>Rugter Hauer</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Blade Runner
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-rugter-hauer.jpg">
-                        </div>
-                        <div class="mc-description">
-                            Blonde, blue-eyed, tall and handsome Dutch actor Rutger Hauer has an international reputation for playing everything from romantic leads to action heroes to sinister villains. Hauer was born in Breukelen, a town in the province ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="material-card Blue-Grey">
-                        <h2>
-                        <span>Morgan Freeman</span>
-                        <strong>
-                            <i class="fa fa-fw fa-star"></i>
-                            Glory
-                        </strong>
-                    </h2>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-morgan-freeman.jpg">
-                        </div>
-                        <div class="mc-description">
-                            Freeman has received Academy Award nominations for his performances in Street Smart, Driving Miss Daisy, The Shawshank Redemption and Invictus ...
-                        </div>
-                    </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="mc-footer">
-                        <h4>
-                            Social
-                        </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
-                    </div>
-                </article>
-            </div>
+
         </div>
+        
     </section>
 
   </v-layout>
@@ -609,7 +52,175 @@
   export default {
     
     data: () => ({   
-      
+      skins: [
+        'material-card Light-Blue',
+        'material-card Cyan',
+        'material-card Teal',
+        'material-card Green',
+        'material-card Grey',
+        'material-card Light-Green',
+        //'material-card Blue-Grey',
+        //'material-card Brown',
+        //'material-card Amber',
+        //'material-card Lime',
+        //'material-card Deep-Orange',
+        //'material-card Orange',
+        //'material-card Yellow'
+        ],
+      items: [
+        { 
+          name: 'Christopher Walken', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg', 
+          project: 'Project name', 
+          info: 'He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War, pero además añadimos más texto.', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Cyan'
+        },
+        { 
+          name: 'Sean Penn', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-sean-penn.jpg', 
+          project: 'Mystic River', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Teal'
+        }, 
+        { 
+          name: 'Clint Eastwood', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-clint-eastwood.jpg', 
+          project: 'Million Dollar Baby', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },
+        { 
+          name: 'Dustin Hoffman', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-dustin-hoffman.jpg', 
+          project: 'Project name', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },
+        { 
+          name: 'Edward Norton', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-edward-norton.jpg', 
+          project: 'Project name', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },
+        { 
+          name: 'Michael Caine', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-michael-caine.jpg', 
+          project: 'Educated Rita', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },
+        { 
+          name: 'Harvey Keitel', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-harvey-keitel.jpg', 
+          project: 'Pulp Fiction', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },
+        { 
+          name: 'Jack Nicholson', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-jack-nicholson.jpg', 
+          project: 'The Shining', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Jeff Bridges', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-jeff-bridges.jpg', 
+          project: 'The Big Lebowski', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Joaquin Phoenix', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-joaquin-phoenix.jpg', 
+          project: 'Her', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Tom Hanks', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-tom-hanks.jpg', 
+          project: 'Project name', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Philip Seymour', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-philip-seymour-hoffman.jpg', 
+          project: 'Project name', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Paul Newman', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-paul-newman.jpg', 
+          project: 'Project name', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Marlon Brando', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-marlon-brando.jpg', 
+          project: 'The Godfather', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Kevin Spacey', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-kevin-spacey.jpg', 
+          project: 'Project name', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Robert De Niro', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-robert-de-niro.jpg', 
+          project: 'Taxi Driver', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Steve Mcqueen', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-steve-mcqueen.jpg', 
+          project: 'Papillon', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Rugter Hauer', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-rugter-hauer.jpg', 
+          project: 'Blade Runner', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        },                                                       
+        { 
+          name: 'Morgan Freeman', 
+          image: 'http://u.lorenzoferrara.net/marlenesco/material-card/thumb-morgan-freeman.jpg', 
+          project: 'Glory', 
+          info: 'He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...', 
+          horario: 'De 8:00h a 17:00h', 
+          skin: 'material-card Light-Blue'
+        }                                                      
+      ]
     }),
 
     mounted () {
@@ -648,14 +259,21 @@
             }
         });
 
-      },        
+      },   
+      randomSkin(item){
+        // 0 -> this.skins.lenght
+        let r = Math.floor(Math.random() * this.skins.length)   
+        return this.skins[r]
+      }           
     },
 
+    computed: {
+
+    }
 
   }
 
 </script>
-
 
 <style scoped>
 
@@ -664,6 +282,7 @@
   }
 
   @import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
+
   .fa-spin-fast {
     -webkit-animation: fa-spin-fast 0.2s infinite linear;
     animation: fa-spin-fast 0.2s infinite linear;
@@ -746,6 +365,8 @@
   .material-card.mc-active h2 {
     top: 0;
     padding: 10px 16px 10px 90px;
+    /* Blas */
+    max-height: 82px;
   }
   .material-card.mc-active h2:before {
     top: 0;
@@ -753,6 +374,23 @@
   .material-card.mc-active h2:after {
     bottom: -16px;
   }
+
+  /* Blas */
+  .material-card.mc-active h2 span {
+    white-space: nowrap; 
+    max-width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 30px;
+  }
+  .material-card.mc-active h2 strong {
+    white-space: nowrap; 
+    max-width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 30px;
+  }
+
   .material-card .mc-content {
     position: absolute;
     right: 0;
@@ -794,8 +432,11 @@
     top: 100%;
     right: 30px;
     left: 30px;
-    bottom: 54px;
-    overflow: hidden;
+    /* Blas */
+    /* bottom: 54px; */
+    /* overflow: hidden; */
+    bottom: 5px;
+    overflow: auto;
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: all 1.2s;
@@ -816,7 +457,9 @@
   .material-card .mc-footer h4 {
     position: absolute;
     top: 200px;
-    left: 30px;
+    /* Blas
+    left: 30px; */
+    left: 20px;
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -910,7 +553,9 @@
     }
   }
   .material-card.mc-active .mc-description {
-    top: 50px;
+    /* Blas
+    top: 50px; */
+    top: 35px;
     padding-top: 5.6em;
     opacity: 1;
     filter: alpha(opacity=100);
@@ -932,14 +577,19 @@
     left: 16px;
     right: 0;
     height: 82px;
-    padding-top: 15px;
-    padding-left: 25px;
+    /* Blas */
+    /* padding-top: 15px; */
+    /* padding-left: 25px; */
+    padding-top: 20px;
+    padding-left: 20px;
   }
   .material-card.mc-active .mc-footer a {
     top: 0;
   }
   .material-card.mc-active .mc-footer h4 {
-    top: -32px;
+    /* Blas */
+    /* top: -32px; */
+    top: 5px;
   }
   .material-card.Red h2 {
     background-color: #F44336;
@@ -1848,7 +1498,9 @@
     background-color: #FAFAFA;
   }
   .material-card.Grey.mc-active .mc-footer {
-    background-color: #F5F5F5;
+    /* Blas
+    background-color: #F5F5F5; */
+    background-color: #CCC;
   }
   .material-card.Grey.mc-active .mc-btn-action {
     border-color: #FAFAFA;
