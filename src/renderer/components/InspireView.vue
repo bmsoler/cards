@@ -5,7 +5,7 @@
        
         <div class="row active-with-click">
 
-            <div class="col-md-3 col-sm-6 col-xs-12" v-for="(item, index) in items" :key="index">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12" v-for="(item, index) in items" :key="index">
                 <article :class="randomSkin(item)">
                     <h2>
                         <span>{{item.name}}</span>
@@ -405,15 +405,24 @@
   }
   .material-card .mc-btn-action {
     position: absolute;
+    /* Blas
     right: 16px;
-    top: 15px;
+    top: 15px; */
+    right: 5px;
+    top: 5px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 5px solid;
+    /* Blas
     width: 54px;
     height: 54px;
-    line-height: 44px;
+    line-height: 44px; 
+    border: 5px solid; */
+    font-size: 12px;
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    line-height: 29px;
     text-align: center;
     color: #fff;
     cursor: pointer;
@@ -425,7 +434,9 @@
     transition: all 0.3s;
   }
   .material-card.mc-active .mc-btn-action {
-    top: 62px;
+    /* Blas
+    top: 62px; */
+    top: 65px;
   }
   .material-card .mc-description {
     position: absolute;

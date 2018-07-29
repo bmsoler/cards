@@ -155,9 +155,12 @@ export default {
     }
   },
 
-  mounthed() {},
+  mounted(){
+
+  },
 
   created: function() {
+
     /* OBTENCIÓN DE DATOS */
     try {
       // axios.get('http://127.0.0.1:'+this.port+'/getAllAGIEvents')
@@ -177,8 +180,6 @@ export default {
       this.newEvent(data);
     };
   },
-
-  watch: {},
 
   computed: {
     colorGradient() {
@@ -206,6 +207,7 @@ export default {
       }
     }
   }
+
 };
 </script>
 
